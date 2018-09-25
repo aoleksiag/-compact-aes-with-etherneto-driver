@@ -1,0 +1,936 @@
+
+*** Running vivado
+    with args -log TOP.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source TOP.tcl -notrace
+Command: synth_design -top TOP -part xc7a200tsbg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 360 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 345.211 ; gain = 99.605
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TOP' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/gigabit_tx.srcs/sources_1/new/top_test.v:3]
+INFO: [Synth 8-638] synthesizing module 'gigabit_test' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/gigabit_test.vhd:40]
+INFO: [Synth 8-3491] module 'byte_data' declared at 'C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/byte_data.vhd:13' bound to instance 'data' of component 'byte_data' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/gigabit_test.vhd:196]
+INFO: [Synth 8-638] synthesizing module 'byte_data' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/byte_data.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'byte_data' (1#1) [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/byte_data.vhd:26]
+INFO: [Synth 8-3491] module 'add_crc32' declared at 'C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/add_crc32.vhd:14' bound to instance 'i_add_crc32' of component 'add_crc32' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/gigabit_test.vhd:207]
+INFO: [Synth 8-638] synthesizing module 'add_crc32' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/add_crc32.vhd:24]
+WARNING: [Synth 8-6014] Unused sequential element v_crc_reg was removed.  [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/add_crc32.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'add_crc32' (2#1) [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/add_crc32.vhd:24]
+INFO: [Synth 8-3491] module 'add_preamble' declared at 'C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/add_preamble.vhd:13' bound to instance 'i_add_preamble' of component 'add_preamble' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/gigabit_test.vhd:216]
+INFO: [Synth 8-638] synthesizing module 'add_preamble' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/add_preamble.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'add_preamble' (3#1) [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/add_preamble.vhd:23]
+INFO: [Synth 8-3491] module 'rgmii_tx' declared at 'C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_tx.vhd:29' bound to instance 'i_rgmii_tx' of component 'rgmii_tx' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/gigabit_test.vhd:225]
+INFO: [Synth 8-638] synthesizing module 'rgmii_tx' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_tx.vhd:44]
+INFO: [Synth 8-5534] Detected attribute (* iob = "TRUE" *) [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_tx.vhd:53]
+INFO: [Synth 8-5534] Detected attribute (* iob = "TRUE" *) [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_tx.vhd:54]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-113] binding component instance 'tx_d0' to cell 'ODDR' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_tx.vhd:153]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-113] binding component instance 'tx_d1' to cell 'ODDR' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_tx.vhd:155]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-113] binding component instance 'tx_d2' to cell 'ODDR' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_tx.vhd:157]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-113] binding component instance 'tx_d3' to cell 'ODDR' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_tx.vhd:159]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-113] binding component instance 'tx_ctl' to cell 'ODDR' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_tx.vhd:161]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D1_INVERTED bound to: 1'b0 
+	Parameter IS_D2_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-113] binding component instance 'tx_c' to cell 'ODDR' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_tx.vhd:164]
+INFO: [Synth 8-256] done synthesizing module 'rgmii_tx' (4#1) [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_tx.vhd:44]
+INFO: [Synth 8-3491] module 'rgmii_rx' declared at 'C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_rx.vhd:31' bound to instance 'i_rgmii_rx' of component 'rgmii_rx' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/gigabit_test.vhd:255]
+INFO: [Synth 8-638] synthesizing module 'rgmii_rx' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_rx.vhd:45]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE_PIPELINED - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-113] binding component instance 'ddr_rx_ctl' to cell 'IDDR' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_rx.vhd:49]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE_PIPELINED - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-113] binding component instance 'ddr_rxd0' to cell 'IDDR' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_rx.vhd:51]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE_PIPELINED - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-113] binding component instance 'ddr_rxd1' to cell 'IDDR' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_rx.vhd:53]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE_PIPELINED - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-113] binding component instance 'ddr_rxd2' to cell 'IDDR' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_rx.vhd:55]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE_PIPELINED - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-113] binding component instance 'ddr_rxd3' to cell 'IDDR' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_rx.vhd:57]
+WARNING: [Synth 8-3848] Net data_enable in module/entity rgmii_rx does not have driver. [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_rx.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'rgmii_rx' (5#1) [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_rx.vhd:45]
+INFO: [Synth 8-113] binding component instance 'bufg_100' to cell 'BUFG' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/gigabit_test.vhd:286]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT bound to: 10 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE bound to: 8 - type: integer 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_DIVIDE bound to: 20 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_DIVIDE bound to: 40 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_DIVIDE bound to: 8 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: -270.000000 - type: float 
+	Parameter CLKOUT4_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter REF_JITTER1 bound to: 0.000000 - type: float 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-113] binding component instance 'clocking' to cell 'PLLE2_BASE' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/gigabit_test.vhd:295]
+WARNING: [Synth 8-6014] Unused sequential element phy_ready_reg was removed.  [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/gigabit_test.vhd:249]
+INFO: [Synth 8-256] done synthesizing module 'gigabit_test' (6#1) [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/gigabit_test.vhd:40]
+INFO: [Synth 8-6157] synthesizing module 'AES_top' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/AES_top.v:3]
+	Parameter WIDTH bound to: 128 - type: integer 
+	Parameter size bound to: 3 - type: integer 
+	Parameter IDLE_top bound to: 3'b001 
+	Parameter S1_top bound to: 3'b010 
+	Parameter S2_top bound to: 3'b011 
+	Parameter S3_top bound to: 3'b100 
+	Parameter S4_top bound to: 3'b101 
+	Parameter S5_top bound to: 3'b110 
+	Parameter final_round bound to: 3'b111 
+INFO: [Synth 8-6157] synthesizing module 'Aes_block_top' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/aes_block_top.v:2]
+	Parameter WIDTH bound to: 128 - type: integer 
+	Parameter size bound to: 3 - type: integer 
+	Parameter IDLE_top bound to: 3'b001 
+	Parameter S1_top bound to: 3'b010 
+	Parameter S2_top bound to: 3'b011 
+	Parameter S3_top bound to: 3'b100 
+	Parameter S4_top bound to: 3'b101 
+INFO: [Synth 8-6157] synthesizing module 'Wh_key' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/Wh_key.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Wh_key' (7#1) [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/Wh_key.v:2]
+INFO: [Synth 8-6157] synthesizing module 'SR_mod' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/SR_mod.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'SR_mod' (8#1) [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/SR_mod.v:2]
+INFO: [Synth 8-6157] synthesizing module 'SB_MC_mod' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/SB_MC_mod.v:2]
+	Parameter size bound to: 3 - type: integer 
+	Parameter IDLE bound to: 3'b001 
+	Parameter S1 bound to: 3'b010 
+	Parameter S2 bound to: 3'b011 
+	Parameter S3 bound to: 3'b100 
+	Parameter S4 bound to: 3'b101 
+INFO: [Synth 8-6155] done synthesizing module 'SB_MC_mod' (9#1) [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/SB_MC_mod.v:2]
+INFO: [Synth 8-6157] synthesizing module 'xor_mod' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/xor_mod.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'xor_mod' (10#1) [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/xor_mod.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Aes_block_top' (11#1) [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/aes_block_top.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'AES_top' (12#1) [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/AES_top.v:3]
+WARNING: [Synth 8-350] instance 'aes' of module 'AES_top' requires 7 connections, but only 5 given [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/gigabit_tx.srcs/sources_1/new/top_test.v:42]
+INFO: [Synth 8-6157] synthesizing module 'data_to_aes' [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/data_to_aes.v:1]
+WARNING: [Synth 8-3848] Net data_rom[4] in module/entity data_to_aes does not have driver. [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/data_to_aes.v:9]
+WARNING: [Synth 8-3848] Net key_rom[4] in module/entity data_to_aes does not have driver. [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/data_to_aes.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'data_to_aes' (13#1) [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/data_to_aes.v:1]
+WARNING: [Synth 8-350] instance 'data' of module 'data_to_aes' requires 5 connections, but only 4 given [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/gigabit_tx.srcs/sources_1/new/top_test.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'TOP' (14#1) [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/gigabit_tx.srcs/sources_1/new/top_test.v:3]
+WARNING: [Synth 8-3331] design rgmii_rx has unconnected port data_enable
+WARNING: [Synth 8-3331] design gigabit_test has unconnected port eth_mdio
+WARNING: [Synth 8-3331] design gigabit_test has unconnected port eth_int_b
+WARNING: [Synth 8-3331] design gigabit_test has unconnected port eth_pme_b
+WARNING: [Synth 8-3331] design TOP has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 408.328 ; gain = 162.723
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin aes:reset to constant 0 [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/gigabit_tx.srcs/sources_1/new/top_test.v:42]
+WARNING: [Synth 8-3295] tying undriven pin data:reset to constant 0 [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/gigabit_tx.srcs/sources_1/new/top_test.v:50]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 408.328 ; gain = 162.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 408.328 ; gain = 162.723
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/contraints/nexys_video.xdc]
+Finished Parsing XDC File [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/contraints/nexys_video.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/contraints/nexys_video.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  PLLE2_BASE => PLLE2_ADV: 1 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 809.926 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 809.926 ; gain = 564.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tsbg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 809.926 ; gain = 564.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 809.926 ; gain = 564.320
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "data_valid" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data_user" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "busy" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "doutclk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "doutclk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "doutctl" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "link_10mb" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "link_100mb" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "link_1000mb" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "adv_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'SB_MC_mod'
+INFO: [Synth 8-5544] ROM "out_4_SB_MC" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "out_3_SB_MC" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "out_2_SB_MC" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "out_1_SB_MC" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "end_mod_SB_MC" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_aes_block_reg' in module 'Aes_block_top'
+INFO: [Synth 8-5544] ROM "busy_AES_BLOCK" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data_out_AES_BLOCK" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "temp_key" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "i" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sample_trig_AES_BLOCK" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_aes_block" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_aes_block" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_aes_block" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_AES_TOP_reg' in module 'AES_top'
+INFO: [Synth 8-5544] ROM "end_round_enable" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "sample_trig" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_AES_TOP" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_AES_TOP" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_AES_TOP" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_AES_TOP" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "data_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "trig" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                            00001 |                              001
+                      S1 |                            00010 |                              010
+                      S2 |                            00100 |                              011
+                      S3 |                            01000 |                              100
+                      S4 |                            10000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'SB_MC_mod'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                IDLE_top |                            00001 |                              001
+                  S1_top |                            00010 |                              010
+                  S2_top |                            00100 |                              011
+                  S3_top |                            01000 |                              100
+                  S4_top |                            10000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_aes_block_reg' using encoding 'one-hot' in module 'Aes_block_top'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 809.926 ; gain = 564.320
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 6     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 13    
+	   2 Input      8 Bit         XORs := 1     
+	   4 Input      8 Bit         XORs := 4     
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	              128 Bit    Registers := 7     
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	               26 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 11    
+	                7 Bit    Registers := 4     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 31    
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 4     
+	   4 Input    128 Bit        Muxes := 1     
+	   7 Input    128 Bit        Muxes := 1     
+	   5 Input    128 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 10    
+	   4 Input     32 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	  65 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 37    
+	   3 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 4     
+	   2 Input      7 Bit        Muxes := 3     
+	   4 Input      7 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 3     
+	   7 Input      4 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 9     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 27    
+	  65 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 13    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module byte_data 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	  65 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	  65 Input      1 Bit        Muxes := 4     
+Module add_crc32 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 8     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module add_preamble 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module rgmii_tx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 5     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 8     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module rgmii_rx 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 4     
+Module gigabit_test 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               26 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module Wh_key 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 4     
+	   2 Input      8 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 1     
+Module SR_mod 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 20    
+Module SB_MC_mod 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      8 Bit         XORs := 4     
++---Registers : 
+	                8 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 8     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module xor_mod 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 2     
+	   4 Input    128 Bit        Muxes := 1     
+Module Aes_block_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 2     
+	               32 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 3     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 5     
+Module AES_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	              128 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   7 Input    128 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   7 Input      4 Bit        Muxes := 2     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 13    
+Module data_to_aes 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 2     
++---Registers : 
+	              128 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   5 Input    128 Bit        Muxes := 2     
+	   3 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element data/busy_reg was removed.  [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/byte_data.vhd:217]
+WARNING: [Synth 8-6014] Unused sequential element data/data_user_reg was removed.  [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/byte_data.vhd:185]
+WARNING: [Synth 8-6014] Unused sequential element i_rgmii_rx/data_reg was removed.  [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_rx.vhd:65]
+WARNING: [Synth 8-6014] Unused sequential element i_rgmii_rx/data_valid_reg was removed.  [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_rx.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element i_rgmii_rx/data_error_reg was removed.  [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/rgmii_rx.vhd:64]
+INFO: [Synth 8-5546] ROM "data/busy" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data/data_user" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data/data_valid" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "adv_data" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "trig" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design gigabit_test has unconnected port eth_mdio
+WARNING: [Synth 8-3331] design gigabit_test has unconnected port eth_int_b
+WARNING: [Synth 8-3331] design gigabit_test has unconnected port eth_pme_b
+WARNING: [Synth 8-3331] design TOP has unconnected port reset
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[124]' (FDRE) to 'data/data_out_reg[52]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[92]' (FDRE) to 'data/data_out_reg[5]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[60]' (FDRE) to 'data/data_out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[100]' (FDRE) to 'data/data_out_reg[19]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[68]' (FDRE) to 'data/data_out_reg[27]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[4]' (FDRE) to 'data/data_out_reg[40]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[36]' (FDRE) to 'data/data_out_reg[19]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[44]' (FDRE) to 'data/data_out_reg[13]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[108]' (FDRE) to 'data/data_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[12]' (FDRE) to 'data/data_out_reg[51]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[76]' (FDRE) to 'data/data_out_reg[25]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[84]' (FDRE) to 'data/data_out_reg[25]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[52]' (FDRE) to 'data/data_out_reg[56]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[20]' (FDRE) to 'data/data_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[116]' (FDRE) to 'data/data_out_reg[0]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[120]' (FDRE) to 'data/data_out_reg[27]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[88]' (FDRE) to 'data/data_out_reg[25]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[56]' (FDRE) to 'data/data_out_reg[81]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[24]' (FDRE) to 'data/data_out_reg[19]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[96]' (FDRE) to 'data/data_out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[64]' (FDRE) to 'data/data_out_reg[9]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[0]' (FDRE) to 'data/data_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[32]' (FDRE) to 'data/data_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[40]' (FDRE) to 'data/data_out_reg[49]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[104]' (FDRE) to 'data/data_out_reg[25]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[8]' (FDRE) to 'data/data_out_reg[43]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[80]' (FDRE) to 'data/data_out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[48]' (FDRE) to 'data/data_out_reg[25]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[16]' (FDRE) to 'data/data_out_reg[9]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[112]' (FDRE) to 'data/data_out_reg[25]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[125]' (FDRE) to 'data/data_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[93]' (FDRE) to 'data/data_out_reg[25]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[61]' (FDRE) to 'data/data_out_reg[9]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[29]' (FDRE) to 'data/data_out_reg[19]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[101]' (FDRE) to 'data/data_out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[5]' (FDRE) to 'data/data_out_reg[35]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[37]' (FDRE) to 'data/data_out_reg[35]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[45]' (FDRE) to 'data/data_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[109]' (FDRE) to 'data/data_out_reg[13]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[13]' (FDRE) to 'data/data_out_reg[18]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[77]' (FDRE) to 'data/data_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[85]' (FDRE) to 'data/data_out_reg[49]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[53]' (FDRE) to 'data/data_out_reg[49]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[21]' (FDRE) to 'data/data_out_reg[19]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[117]' (FDRE) to 'data/data_out_reg[51]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[121]' (FDRE) to 'data/data_out_reg[35]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[89]' (FDRE) to 'data/data_out_reg[26]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[57]' (FDRE) to 'data/data_out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[25]' (FDRE) to 'data/data_out_reg[63]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[97]' (FDRE) to 'data/data_out_reg[9]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[65]' (FDRE) to 'data/data_out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[1]' (FDRE) to 'data/data_out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[33]' (FDRE) to 'data/data_out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[41]' (FDRE) to 'data/data_out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[105]' (FDRE) to 'data/data_out_reg[27]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[9]' (FDRE) to 'data/data_out_reg[74]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[73]' (FDRE) to 'data/data_out_reg[2]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[49]' (FDRE) to 'data/data_out_reg[86]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[17]' (FDRE) to 'data/data_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[113]' (FDRE) to 'data/data_out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[122]' (FDRE) to 'data/data_out_reg[18]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[90]' (FDRE) to 'data/data_out_reg[43]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[58]' (FDRE) to 'data/data_out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[26]' (FDRE) to 'data/data_out_reg[46]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[98]' (FDRE) to 'data/data_out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[66]' (FDRE) to 'data/data_out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[2]' (FDRE) to 'data/data_out_reg[6]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[34]' (FDRE) to 'data/data_out_reg[27]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[42]' (FDRE) to 'data/data_out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[106]' (FDRE) to 'data/data_out_reg[18]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[10]' (FDRE) to 'data/data_out_reg[71]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[74]' (FDRE) to 'data/data_out_reg[119]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[82]' (FDRE) to 'data/data_out_reg[6]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[18]' (FDRE) to 'data/data_out_reg[75]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[114]' (FDRE) to 'data/data_out_reg[86]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[123]' (FDRE) to 'data/data_out_reg[119]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[91]' (FDRE) to 'data/data_out_reg[86]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[27]' (FDRE) to 'data/data_out_reg[78]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[99]' (FDRE) to 'data/data_out_reg[78]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[67]' (FDRE) to 'data/data_out_reg[6]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[3]' (FDRE) to 'data/data_out_reg[22]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[35]' (FDRE) to 'data/data_out_reg[38]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[107]' (FDRE) to 'data/data_out_reg[38]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[75]' (FDRE) to 'data/data_out_reg[79]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[83]' (FDRE) to 'data/data_out_reg[71]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[51]' (FDRE) to 'data/data_out_reg[70]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[19]' (FDRE) to 'data/data_out_reg[47]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[115]' (FDRE) to 'data/data_out_reg[63]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[86]' (FDRE) to 'data/data_out_reg[126]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[54]' (FDRE) to 'data/data_out_reg[38]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[22]' (FDRE) to 'data/data_out_reg[30]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[118]' (FDRE) to 'data/data_out_reg[63]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[87]' (FDRE) to 'data/data_out_reg[63]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[55]' (FDRE) to 'data/data_out_reg[30]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[23]' (FDRE) to 'data/data_out_reg[6]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[119]' (FDRE) to 'data/data_out_reg[127]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[46]' (FDRE) to 'data/data_out_reg[62]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[110]' (FDRE) to 'data/data_out_reg[30]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[78]' (FDRE) to 'data/data_out_reg[111]'
+INFO: [Synth 8-3886] merging instance 'data/data_out_reg[102]' (FDRE) to 'data/data_out_reg[71]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (data/\key_out_reg[19] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (hehxd/\i_rgmii_tx/tx_ready_meta_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (hehxd/\i_rgmii_tx/hold_error_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (hehxd/\i_rgmii_tx/tx_ready_meta_reg )
+WARNING: [Synth 8-3332] Sequential element (i_rgmii_tx/hold_error_reg) is unused and will be removed from module gigabit_test.
+WARNING: [Synth 8-3332] Sequential element (i_rgmii_tx/tx_ready_meta_reg) is unused and will be removed from module gigabit_test.
+WARNING: [Synth 8-3332] Sequential element (i_rgmii_tx/hold_data_reg[3]) is unused and will be removed from module gigabit_test.
+WARNING: [Synth 8-3332] Sequential element (i_rgmii_tx/hold_data_reg[2]) is unused and will be removed from module gigabit_test.
+WARNING: [Synth 8-3332] Sequential element (i_rgmii_tx/hold_data_reg[1]) is unused and will be removed from module gigabit_test.
+WARNING: [Synth 8-3332] Sequential element (i_rgmii_tx/hold_data_reg[0]) is unused and will be removed from module gigabit_test.
+WARNING: [Synth 8-3332] Sequential element (busy_TOP_reg) is unused and will be removed from module AES_top.
+WARNING: [Synth 8-3332] Sequential element (key_out_reg[19]) is unused and will be removed from module data_to_aes.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 809.926 ; gain = 564.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|Wh_key      | T1         | 256x8         | LUT            | 
+|Wh_key      | T1         | 256x8         | LUT            | 
+|Wh_key      | T1         | 256x8         | LUT            | 
+|Wh_key      | T1         | 256x8         | LUT            | 
+|SB_MC_mod   | T3         | 256x8         | LUT            | 
+|SB_MC_mod   | T1         | 256x8         | LUT            | 
+|SB_MC_mod   | T1         | 256x8         | LUT            | 
+|SB_MC_mod   | T2         | 256x8         | LUT            | 
+|SB_MC_mod   | T1         | 256x8         | LUT            | 
+|SB_MC_mod   | T2         | 256x8         | LUT            | 
+|SB_MC_mod   | T3         | 256x8         | LUT            | 
+|SB_MC_mod   | T1         | 256x8         | LUT            | 
+|SB_MC_mod   | T2         | 256x8         | LUT            | 
+|SB_MC_mod   | T3         | 256x8         | LUT            | 
+|SB_MC_mod   | T2         | 256x8         | LUT            | 
+|SB_MC_mod   | T3         | 256x8         | LUT            | 
+|Wh_key      | T1         | 256x8         | LUT            | 
+|Wh_key      | T1         | 256x8         | LUT            | 
+|Wh_key      | T1         | 256x8         | LUT            | 
+|Wh_key      | T1         | 256x8         | LUT            | 
+|SB_MC_mod   | T3         | 256x8         | LUT            | 
+|SB_MC_mod   | T1         | 256x8         | LUT            | 
+|SB_MC_mod   | T1         | 256x8         | LUT            | 
+|SB_MC_mod   | T1         | 256x8         | LUT            | 
+|SB_MC_mod   | T2         | 256x8         | LUT            | 
+|SB_MC_mod   | T3         | 256x8         | LUT            | 
+|SB_MC_mod   | T1         | 256x8         | LUT            | 
+|SB_MC_mod   | T3         | 256x8         | LUT            | 
+|SB_MC_mod   | T3         | 256x8         | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 809.926 ; gain = 564.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 826.664 ; gain = 581.059
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 839.828 ; gain = 594.223
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4163] Replicating register \hehxd/i_rgmii_tx/doutctl_reg[1]  to handle IOB=TRUE attribute
+INFO: [Synth 8-4163] Replicating register \hehxd/i_rgmii_tx/doutctl_reg[0]  to handle IOB=TRUE attribute
+INFO: [Synth 8-4163] Replicating register \hehxd/i_rgmii_tx/dout_reg[7]  to handle IOB=TRUE attribute
+INFO: [Synth 8-4163] Replicating register \hehxd/i_rgmii_tx/dout_reg[3]  to handle IOB=TRUE attribute
+INFO: [Synth 8-4163] Replicating register \hehxd/i_rgmii_tx/dout_reg[6]  to handle IOB=TRUE attribute
+INFO: [Synth 8-4163] Replicating register \hehxd/i_rgmii_tx/dout_reg[2]  to handle IOB=TRUE attribute
+INFO: [Synth 8-4163] Replicating register \hehxd/i_rgmii_tx/dout_reg[5]  to handle IOB=TRUE attribute
+INFO: [Synth 8-4163] Replicating register \hehxd/i_rgmii_tx/dout_reg[1]  to handle IOB=TRUE attribute
+INFO: [Synth 8-4163] Replicating register \hehxd/i_rgmii_tx/dout_reg[4]  to handle IOB=TRUE attribute
+INFO: [Synth 8-4163] Replicating register \hehxd/i_rgmii_tx/dout_reg[0]  to handle IOB=TRUE attribute
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5410] Found another clock driver \hehxd/bufg_100 :O [C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/hdl/gigabit_test.vhd:286]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 839.828 ; gain = 594.223
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 839.828 ; gain = 594.223
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 839.828 ; gain = 594.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 839.828 ; gain = 594.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 839.828 ; gain = 594.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 839.828 ; gain = 594.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                     | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|TOP         | hehxd/i_add_preamble/delay_data_valid_reg[6] | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|TOP         | hehxd/i_add_preamble/delay_data_reg[63]      | 8      | 8     | NO           | NO                 | YES               | 8      | 0       | 
++------------+----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     5|
+|2     |CARRY4     |    31|
+|3     |IDDR       |     5|
+|4     |LUT1       |     9|
+|5     |LUT2       |    86|
+|6     |LUT3       |    96|
+|7     |LUT4       |   331|
+|8     |LUT5       |   223|
+|9     |LUT6       |   766|
+|10    |MUXF7      |   208|
+|11    |MUXF8      |    64|
+|12    |ODDR       |     6|
+|13    |PLLE2_BASE |     1|
+|14    |SRL16E     |     9|
+|15    |FDRE       |  1029|
+|16    |FDSE       |    15|
+|17    |IBUF       |    11|
+|18    |OBUF       |    12|
++------+-----------+------+
+
+Report Instance Areas: 
++------+-------------------+--------------+------+
+|      |Instance           |Module        |Cells |
++------+-------------------+--------------+------+
+|1     |top                |              |  2907|
+|2     |  aes              |AES_top       |  2213|
+|3     |    aes_block      |Aes_block_top |  1923|
+|4     |      key_block    |Wh_key        |   610|
+|5     |      u2           |SB_MC_mod     |   744|
+|6     |      u3           |xor_mod       |   132|
+|7     |  data             |data_to_aes   |    83|
+|8     |  hehxd            |gigabit_test  |   584|
+|9     |    data           |byte_data     |   175|
+|10    |    i_add_crc32    |add_crc32     |    59|
+|11    |    i_add_preamble |add_preamble  |    49|
+|12    |    i_rgmii_rx     |rgmii_rx      |    17|
+|13    |    i_rgmii_tx     |rgmii_tx      |   115|
++------+-------------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 839.828 ; gain = 594.223
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 839.828 ; gain = 192.625
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 839.828 ; gain = 594.223
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 326 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  PLLE2_BASE => PLLE2_ADV: 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+221 Infos, 32 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 839.828 ; gain = 606.797
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Adrian/Desktop/FPGA_GigabitTx-master/gigabit_tx.runs/synth_1/TOP.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TOP_utilization_synth.rpt -pb TOP_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.096 . Memory (MB): peak = 839.828 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 14 11:06:52 2018...

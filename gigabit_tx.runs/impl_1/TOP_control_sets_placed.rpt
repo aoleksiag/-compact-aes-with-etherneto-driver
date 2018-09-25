@@ -1,0 +1,111 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri Sep 14 11:07:45 2018
+| Host         : DESKTOP-BFI3NDQ running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file TOP_control_sets_placed.rpt
+| Design       : TOP
+| Device       : xc7a200t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    42 |
+| Unused register locations in slices containing registers |    80 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            3 |
+|      6 |            1 |
+|      8 |            5 |
+|     10 |            1 |
+|     14 |            2 |
+|    16+ |           30 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             228 |           60 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             116 |           17 |
+| Yes          | No                    | No                     |            1350 |          241 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             394 |           60 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------+------------------------------------------------------+------------------------------------------+------------------+----------------+
+|     Clock Signal    |                     Enable Signal                    |             Set/Reset Signal             | Slice Load Count | Bel Load Count |
++---------------------+------------------------------------------------------+------------------------------------------+------------------+----------------+
+|  eth_rxck_IBUF_BUFG | hehxd/i_rgmii_rx/link_full_duplex_i_1_n_0            |                                          |                1 |              2 |
+|  clk125MHz          | hehxd/i_rgmii_tx/doutctl[0]_i_1_n_0                  |                                          |                1 |              2 |
+|  clk125MHz          | hehxd/i_rgmii_tx/doutctl[1]_i_1_n_0                  |                                          |                1 |              2 |
+|  eth_rxck_IBUF_BUFG |                                                      |                                          |                1 |              6 |
+|  xlnx_opt_          | aes/round_count                                      | aes/round_count[3]_i_1_n_0               |                2 |              8 |
+|  xlnx_opt_          | aes/aes_block/count                                  | aes/count[3]_i_1_n_0                     |                1 |              8 |
+|  clk125MHz          | hehxd/i_add_crc32/data_enable_out                    | hehxd/i_add_preamble/data_out_n_0        |                1 |              8 |
+|  clk125MHz          | hehxd/data/E[0]                                      | hehxd/data/SS[0]                         |                1 |              8 |
+|  xlnx_opt_          | data/i[0]_i_2_n_0                                    | data/i[0]_i_1__0_n_0                     |                1 |              8 |
+|  xlnx_opt_          | aes/aes_block/u2/FSM_onehot_state[4]_i_1_n_0         |                                          |                2 |             10 |
+|  clk125MHz          | hehxd/i_rgmii_tx/sel                                 | hehxd/i_add_preamble/fully_framed_enable |                2 |             14 |
+|  clk125MHz          | hehxd/data/crc                                       | hehxd/data/crc_reg[1]                    |                3 |             14 |
+|  xlnx_opt_          | aes/aes_block/u2/out_2_SB_MC[7]_i_1_n_0              |                                          |                7 |             16 |
+|  xlnx_opt_          | aes/aes_block/u2/out_1_SB_MC[7]_i_1_n_0              |                                          |                8 |             16 |
+|  clk125MHz          |                                                      | hehxd/data/counter_reg_n_0_[11]          |                4 |             16 |
+|  clk125MHz          | hehxd/i_rgmii_tx/dout[7]_i_1_n_0                     |                                          |                1 |             16 |
+|  xlnx_opt_          | aes/aes_block/u2/out_3_SB_MC[7]_i_1_n_0              |                                          |                8 |             16 |
+|  clk125MHz          | hehxd/data/data_enable                               |                                          |                2 |             16 |
+|  xlnx_opt_          | aes/aes_block/u2/out_4_SB_MC[7]_i_1_n_0              |                                          |                7 |             16 |
+|  clk50MHz           |                                                      | switches_IBUF[3]                         |                2 |             18 |
+|  xlnx_opt_          | aes/aes_block/data_in_temp                           | aes/data_in_temp[126]_i_1_n_0            |                4 |             18 |
+|  clk125MHz          | hehxd/data/counter_reg[1]_0                          | data/counter_reg[1]_0                    |                3 |             22 |
+|  clk125MHz          | hehxd/i_add_preamble/fully_framed_enable             |                                          |                5 |             24 |
+|  xlnx_opt_          | data/i[0]_i_2_n_0                                    |                                          |                2 |             24 |
+|  xlnx_opt_          |                                                      | data/counter[15]_i_1_n_0                 |                4 |             28 |
+|  xlnx_opt_          | data/i[0]_i_2_n_0                                    | data/i[15]_i_1_n_0                       |                4 |             30 |
+|  clk50MHz           |                                                      |                                          |                3 |             34 |
+|  clk125MHz          | hehxd/i_add_crc32/data_enable_out                    |                                          |                5 |             38 |
+|  clk125MHz          | hehxd/reset_counter[0]_i_1_n_0                       |                                          |                7 |             50 |
+|  clk125MHz          | hehxd/data/crc                                       |                                          |               11 |             50 |
+|  clk50MHz           |                                                      | hehxd/clear                              |                7 |             54 |
+|  xlnx_opt_          | aes/aes_block/u3/p_1_out[27]                         | aes/aes_block/i_reg_n_0_[2]              |                8 |             64 |
+|  xlnx_opt_          | aes/aes_block/u3/p_1_out[83]                         | aes/aes_block/i_reg_n_0_[2]              |               10 |             64 |
+|  xlnx_opt_          | aes/aes_block/u3/data_out_XOR_MOD[63]_i_1_n_0        | aes/aes_block/i_reg_n_0_[2]              |               11 |             64 |
+|  xlnx_opt_          | aes/aes_block/u3/p_1_out[123]                        | aes/aes_block/i_reg_n_0_[2]              |                9 |             64 |
+|  xlnx_opt_          | aes/aes_block/temp_key                               |                                          |               23 |             64 |
+|  clk125MHz          |                                                      |                                          |               16 |             78 |
+|  xlnx_opt_          |                                                      |                                          |               40 |            110 |
+|  xlnx_opt_          | aes/aes_block/data_in_temp                           |                                          |               31 |            238 |
+|  xlnx_opt_          | aes/data_out_TOP[127]_i_1_n_0                        |                                          |               28 |            256 |
+|  xlnx_opt_          | aes/aes_block/FSM_onehot_state_aes_block[4]_i_1_n_0  |                                          |               62 |            256 |
+|  xlnx_opt_          | aes/aes_block/FSM_onehot_state_aes_block_reg_n_0_[4] |                                          |               31 |            256 |
++---------------------+------------------------------------------------------+------------------------------------------+------------------+----------------+
+
+
